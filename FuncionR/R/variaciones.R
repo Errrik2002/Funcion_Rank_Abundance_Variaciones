@@ -201,7 +201,7 @@ Variaciones <- function(sp,r,mc,mp,z,y,x){
     basalrank_prueba <- c()
     ini <- 1
 
-    for (i in 1:sp) {
+    for (i in 1:n_species) {
 
       Prom <- sum(basal_rank[,ini]/10 )
 
