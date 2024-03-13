@@ -27,12 +27,6 @@ A data frame that contains the A,a, b values of the different Rank-Abundance cur
 \description{
 The Variations function provides a visualization about the effect of different parameters on the Rank-abundance curve.
 }
-\examples{
-Variaciones(5,20,7,7,3,7,4)
-
-
-
-}
 \author{
 Erik Martinez
 }
