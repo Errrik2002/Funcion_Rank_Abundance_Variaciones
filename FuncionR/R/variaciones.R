@@ -18,8 +18,8 @@
 #'
 #' @author Erik Martinez
 #'
-#' @examples
-#' Variaciones(5,20,7,7,3,7,4)
+#' @example C:/Users/DELL/Desktop/GitHub/Funcion_Rank_Abundance_Variaciones/FuncionR/R/Example_function.R
+#'
 #'
 #'
 #'

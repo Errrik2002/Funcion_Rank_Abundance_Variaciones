@@ -3,7 +3,7 @@
     "path": "C:/Users/DELL/Desktop/GitHub/Funcion_Rank_Abundance_Variaciones/FuncionR/R/variaciones.R",
     "project_path": "R/variaciones.R",
     "type": "r_source",
-    "hash": "3806428710",
+    "hash": "2611101522",
     "contents": "",
     "dirty": false,
     "created": 1709235070727.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "203,25",
-        "scrollLine": "196"
+        "cursorPosition": "40,2",
+        "scrollLine": "19"
     },
     "folds": "",
-    "lastKnownWriteTime": 1710261964,
+    "lastKnownWriteTime": 1710292780,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1710261964553,
+    "last_content_update": 1710292780335,
     "read_only": false,
     "read_only_alternatives": []
 }
