@@ -1,0 +1,62 @@
+---
+title: "Variaciones"
+output: html_document
+date: "2024-03-11"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+devtools::install("~/Desktop/Funcion_Rank_Abundance_Variaciones-main(1)/Funcion_Rank_Abundance_Variaciones-main/FuncionR")
+```
+
+
+"Variaciones" es una funcion que permite visualizar los cambios de los parametros de la curva Rank-Abundance (A, a y b), en base a las diferentes configuraciones de valores de parametros involucrados en el model McArthur con miaSim. Para estimar los valores A,a y b de la curva Rank-Abundance, se uso la funcion BC_Multiple del mismo paquete DGBD. 
+
+
+## Uso
+
+La funcion es facil de usar, colocando la funcion Variaciones y colocar sp= especies, r= numero de recursos, mc= media de produccion, mp= media de produccion, x= el parametro que queremos variar (sp=1, r=2,mc=3 y mp=4), y= cantidad a variar en cada iteracion al parametro seleccionado y z= numero de iteraciones que se haran.
+
+## Ejemplos
+En este caso, la funcion tendra 15 especies (sp), 20 recursos (r), su media de consumo sera de 3 (mc) y su media de produccion sera de 2 (mp), el parametro a variar en este caso sera 1, que corresponde a especie (sp), cada iteracion aumentara 10 unidades el numero de especies y seran 7 iteraciones.
+```{r ejemplo, echo=FALSE, message=FALSE}
+library(FuncionR)
+example_one <- Variaciones(15,20,3,2,1,10,7)
+```
+La tabla del final es el resultado, en donde se observan los diferentes valores de A, a y b conforme el numero de especies, se oberva que por cada iteracion, el numero de epecies aumenta de 10 en 10. Hasta llegar al 75. Respecto a los valores de A, a y b, no hay un patron de cambio, pues algunos valores como A, disminuyen, posteriormente vuelven a aumentar. En los valores de a, hay cambios pero no hay un patron distinguible. El valor de b, el cambio es poco e igual sin patron.
+
+
+```{r ejemplo2, echo=FALSE, message=FALSE}
+example_two <- Variaciones(15,20,5,5,2,10,7)
+```
+ En este ejemplo se cambio el parametro de recursos, nuevamente, no es observable algun patron de cambio en A, a y b de la curva Rank-Abundance
+ 
+```{r ejemplo3, echo=FALSE, message=FALSE}
+example_three <- Variaciones(15,20,5,5,3,10,7)
+
+```
+ EL parametro que se cambio en este ejemplo fue el de la media de consumo, en los valores de la curva Rank-Abundance, nuevamente no se observa algun patron de cambio srespecto al parametro que se escogio. 
+
+```{r ejemplo4, echo=FALSE, message=FALSE}
+example_four <- Variaciones(15,20,5,5,4,10,7)
+
+```
+En este ejemplo el parametro que se cambio fue la media de produccion. no se logro observar algun patron en los cambios de los valores de la curva Rank-Abundance
+
+```{r ejemplo 5, echo=FALSE, message=FALSE}
+example_five <- Variaciones(50, 30, 20,20,1,30,4)
+```
+
+
+## Limitaciones
+
+Los parametros de especies y numero de recursos, cuando son una gran cantidad, puede ser desafiante para algunos equipos dependiendo las especificaciones. El parametro de especeis al llegar a 40, puede resultar en el aborto de la sesion en algunos equipos, mientras que otros son capaces de llegar a 300 especies. El parametro de recursos es un poco menos demandante, pero puede llegar hasta la cantidad de 250. 
+
+La funcion puede unicamente ver el efecto del cambio de parametros de manera individual. No permite el cambio de mas de un parametro.
+
+## Efecto en los parametros
+
+
