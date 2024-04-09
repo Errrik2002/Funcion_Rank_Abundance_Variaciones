@@ -1,0 +1,53 @@
+---
+title: "Variaciones"
+output: html_document
+date: "2024-03-11"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+"Variaciones" es una funcion que permite visualizar los cambios de los parametros de la curva Rank-Abundance (A, a y b), en base a las diferentes configuraciones de valores de parametros involucrados en el model McArthur con miaSim. Para estimar los valores A,a y b de la curva Rank-Abundance, se uso la funcion BC_Multiple del mismo paquete DGBD. 
+
+
+## Uso
+
+La funcion es facil de usar, colocando la funcion Variaciones y colocar sp= especies, r= numero de recursos, mc= media de produccion, mp= media de produccion, x= el parametro que queremos variar (sp=1, r=2,mc=3 y mp=4), y= cantidad a variar en cada iteracion al parametro seleccionado y z= numero de iteraciones que se haran.
+
+## Ejemplos
+
+```{r ejemplo, echo=FALSE, message=FALSE}
+library(FuncionR)
+example_one <- Variaciones(11,20,3,2,1,5,5)
+```
+La tabla del final es el resultado, en donde se observan los diferentes valores de A, a y b conforme el numero de especies aumenta 5 especies mas cada iteracion. (MENCIONAR ALGO DE LOS CAMBIOS CONFORME LAS ESPECIES, PERO HACERLO EN LA COMPUTADORA DEL LABORATORIO PARA SER CON 50 ESPECIES)
+
+
+```{r ejemplo2, echo=FALSE, message=FALSE}
+example_two <- Variaciones(11,20,3,2,2,5,5)
+```
+ (COMENTARIOS)
+ 
+```{r ejemplo3, echo=FALSE, message=FALSE}
+example_three <- Variaciones(11,20,3,2,3,5,5)
+
+```
+ (COMENTARIOS DE RESULTADOS)
+
+```{r ejemplo4, echo=FALSE, message=FALSE}
+example_four <- Variaciones(11,20,3,2,4,5,5)
+
+```
+(COMENTARIOS DE RESULTADOS)
+
+
+## Limitaciones
+
+Los parametros de especies y numero de recursos, cuando son una gran cantidad, puede ser desafiante para algunos equipos dependiendo las especificaciones. El parametro de especeis al llegar a 40, puede resultar en el aborto de la sesion en algunos equipos, mientras que otros son capaces de llegar a 300 especies. El parametro de recursos es un poco menos demandante, pero puede llegar hasta la cantidad de 250. 
+
+La funcion puede unicamente ver el efecto del cambio de parametros de manera individual. No permite el cambio de mas de un parametro.
+
+## Efecto en los parametros
+
+
